@@ -196,6 +196,7 @@ header .main-nav ul a {
   bottom: -30px;
   left: 0;
   width: 100%;
+  z-index: 9;
 }
 .carousel-card {
   text-align: start;
@@ -378,6 +379,28 @@ header .main-nav ul a {
   .intro {
     background-position: 0 0 300px 0 !important;
   }
+}
+
+.fixed-contact {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  z-index: 999;
+}
+
+.fixed-contact div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 10px 0 10px;
+  background-color: #84754d;
+  margin-block: 10px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 20px #41bf2b23;
 }
 
 @media (max-width: 991.98px) {
