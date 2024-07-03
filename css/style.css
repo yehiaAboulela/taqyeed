@@ -15,6 +15,7 @@ body {
 }
 .h1-md {
   font-size: 36px;
+  font-weight: 600;
 }
 a {
   color: black;
@@ -69,6 +70,36 @@ header .main-nav ul a {
   display: inline-block;
   padding: 10px 20px;
 }
+.language {
+  position: relative;
+  transition: 0.3;
+  cursor: pointer;
+}
+.language img {
+  transition: 0.3s;
+}
+.language .sec-language {
+  background-color: #dadada;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.language:hover img {
+  transform: rotate(180deg);
+}
+.language:hover .sec-language {
+  visibility: visible;
+  opacity: 1;
+}
 
 #escMinuBtn {
   width: 30px;
@@ -113,6 +144,8 @@ header .main-nav ul a {
 .mobile-nav.active .content {
   transform: translateX(0);
 }
+
+/* intro */
 
 .intro {
   background-image: url(../images/introbg.png);
@@ -173,10 +206,182 @@ header .main-nav ul a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
 }
 .carousel-card img {
-  width: 40px !important;
+  width: 60px !important;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
 .carousel-card p {
   font-size: 14px;
+  transition: color 0.3s;
+}
+.carousel-card h2 {
+  transition: color 0.3s;
+}
+.carousel-card:hover {
+  background-color: #84754d;
+  box-shadow: rgba(0, 0, 0, 0.235) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.carousel-card:hover p,
+.carousel-card:hover h2 {
+  color: white !important;
+}
+.carousel-card:hover img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.owl-carousel button.owl-dot {
+  width: 25px;
+  height: 10px;
+  background-color: #d9d9d9;
+  margin: 5px;
+  border-radius: 50px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+.owl-carousel button.owl-dot.active {
+  width: 40px;
+  background-color: #84754d;
+}
+
+.why-us-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 60px;
+  text-align: center;
+}
+.why-us-card .image-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+.why-us-card h5,
+.why-us-card p {
+  transition: 0.3s;
+}
+.why-us-card.active {
+  border: 2px solid #84754d;
+  border-radius: 10px;
+  box-shadow: #84754d33 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.why-us-card.active .image-wrapper {
+  background-color: #84754d;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.what-they-say {
+  background-color: #716fe50a;
+}
+.testimonials-parent {
+  width: 700px;
+  margin-inline: auto;
+  text-align: center;
+}
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 60px;
+}
+.testimonials-parent .paragraph {
+  position: relative;
+}
+.testimonials-parent .paragraph .before {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+.testimonials-parent .paragraph .after {
+  position: absolute;
+  bottom: -20px;
+  right: 50px;
+}
+
+.stay-connetcted {
+  background-image: linear-gradient(to bottom, white 70%, black 30%);
+}
+.footer-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-card .footer-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #84754d;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+.footer-nav ul {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-nav ul li {
+  margin-inline: 20px;
+}
+
+.footer-end {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 40px;
+}
+@media screen and (max-width: 767.98px) {
+  .testimonials-parent {
+    width: 100%;
+  }
+  .testimonials-parent .paragraph .before {
+    position: absolute;
+    top: -30px;
+    left: 0px;
+  }
+  .testimonials-parent .paragraph .after {
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+  }
+  .inputs {
+    padding-inline: 0;
+  }
+  .intro form h1 {
+    font-size: 25px;
+  }
+  .intro .h1-lg {
+    font-size: 40px;
+  }
+  .intro {
+    background-position: 0 0 300px 0 !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .intro {
+    background-position: left !important;
+  }
 }

@@ -1,0 +1,14 @@
+body {
+  direction: rtl;
+  text-align: start;
+}
+.owl-carousel {
+  direction: ltr;
+}
+.owl-carousel .carousel-card {
+  direction: rtl;
+}
+
+.arrow {
+  transform: scaleX(-1);
+}
