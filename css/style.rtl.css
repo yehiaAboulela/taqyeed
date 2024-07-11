@@ -12,3 +12,6 @@ body {
 .arrow {
   transform: scaleX(-1);
 }
+p {
+  font-size: 18px;
+}
