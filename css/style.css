@@ -413,9 +413,21 @@ header .main-nav ul a {
   width: 300%;
   position: relative;
   scrollbar-width: none;
+  animation: wave-tow 1s;
+}
+@keyframes wave-tow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-80px);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }
 .carousel-wrapper::-webkit-scrollbar {
-  display: none; /* Hides scrollbar in Webkit-based browsers */
+  display: none;
 }
 .carousel-parent .slider {
   display: flex;
