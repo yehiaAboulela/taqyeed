@@ -15,3 +15,10 @@ body {
 p {
   font-size: 18px;
 }
+.main-side-nav ul {
+  padding-right: 0;
+}
+.language .sec-language {
+  left: auto;
+  right: 0;
+}

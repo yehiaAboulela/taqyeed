@@ -407,8 +407,40 @@ header .main-nav ul a {
   .intro {
     background-position: left !important;
   }
-}
 
+  .main-side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+    z-index: 99999999999;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.25);
+    padding: 50px 20px;
+    transform: translateX(-110%);
+    transition: 0.3s;
+  }
+  .main-side-nav.active {
+    transform: translateX(0);
+  }
+  .main-side-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start !important;
+  }
+  .main-side-nav ul li {
+    text-align: start;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .main-side-nav ul li:hover {
+    transform: translateX(5px);
+  }
+  .main-side-nav .language {
+    padding: 20px;
+  }
+}
 .carousel-parent {
   width: 300%;
   position: relative;
